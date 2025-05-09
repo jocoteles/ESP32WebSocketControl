@@ -201,7 +201,7 @@ function initializeApp() {
 // --- Service Worker Registration for Progressive Web App ---
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./serviceWorker.js')
+        navigator.serviceWorker.register('../serviceWorker.js')
             .then((registration) => {
                 console.log('Service Worker: Registered successfully with scope: ', registration.scope);
             })
