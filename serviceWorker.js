@@ -1,4 +1,4 @@
- // js/service-worker.js
+ // service-worker.js
 
  const CACHE_NAME = 'esp32-control-cache-v1'; // Cache version, change to update cache
  // List of files that make up the "app shell" to be cached
