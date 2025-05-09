@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Control & Stream</title>
+    <!-- Pico.css Framework via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <!-- Custom CSS styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Page Title -->
+        <h1>ESP32 Control & Stream</h1>
+        <div id="connectionStatus">Connecting...</div>
+
+        <!-- Section: Real-Time Stream Control -->
+        <article>
+            <header>Real-Time Stream</header>
+            <div class="grid">
+                <button id="startStreamButton" aria-busy="false">Start Stream</button>
+                <button id="stopStreamButton" class="secondary" aria-busy="false" disabled>Stop Stream</button>
+            </div>
+            <small id="streamStatusDisplay">Stream stopped.</small>
+            <pre id="binaryDataLogArea">(Stream data log will appear here)</pre>
+        </article>
+
+        <!-- Section: Configurable Variables (Get/Set) -->
+        <figure>
+            <header>Configurable Variables (Get/Set)</header>
+            <button id="loadVarsConfigButton" style="margin-bottom: 1rem;" disabled>Load Variables Configuration</button>
+            
+            <div> 
+                <table role="grid">
+                    <thead>
+                        <tr>
+                            <th scope="col">Variable</th>
+                            <th scope="col">Current Value</th>
+                            <th scope="col">ESP32 Type</th>
+                            <th scope="col">Actions (Get/Set)</th> 
+                        </tr>
+                    </thead>
+                    <tbody id="variablesTableBody">
+                        <tr><td colspan="4" style="text-align: center; color: grey;">Click "Load Variables Configuration..." or wait for connection.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </figure>
+
+        <!-- Informational Footer -->
+        <footer>
+            <hr>
+            <small>Connect to the ESP32's Wi-Fi network (SSID: ESP32_Control_AP) and reload the page if needed.</small>
+        </footer>
+
+    </main> <!-- End of main container -->
+
+    <!-- Import the main JavaScript module -->
+    <!-- The 'type="module"' attribute is essential for ES6 modules -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
