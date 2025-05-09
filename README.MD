@@ -129,6 +129,8 @@ Para adaptar este framework ao seu próprio projeto:
 
 ## Authoring
 
-This project was strongly developed with Gemini 2.5 Pro AI Model.
+The code of this project was strongly developed with Gemini 2.5 Pro AI model.
+
+Icons generate with DALL·E model.
 
 ---

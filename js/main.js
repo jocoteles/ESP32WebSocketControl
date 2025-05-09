@@ -198,5 +198,21 @@ function initializeApp() {
     wsService.connect(); 
 }
 
+// --- Service Worker Registration for Progressive Web App ---
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker: Registered successfully with scope: ', registration.scope);
+            })
+            .catch((error) => {
+                console.error('Service Worker: Registration failed: ', error);
+            });
+    });
+} else {
+    console.log('Service Worker: Not supported by this browser.');
+}
+
+
 // Start the application initialization when the DOM is ready.
 document.addEventListener('DOMContentLoaded', initializeApp);
