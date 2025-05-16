@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Title of the application -->
+    <title>ESP32 Control & Stream</title>
+
+    <!-- Link to the Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Theme Color for browser UI -->
+    <meta name="theme-color" content="#37474F"> 
+
+    <!-- iOS Specific Meta Tags for "Add to Home Screen" -->
+    <meta name="mobile-web-app-capable" content="yes"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- or default, black -->
+    <meta name="apple-mobile-web-app-title" content="ESP32Ctrl"> <!-- Title for iOS home screen icon -->
+
+    <!-- Favicons for different platforms and purposes -->
+    <!-- Generic Favicon -->
+    <link rel="icon" href="icons/icon-76x76.png" sizes="76x76" type="image/png">
+    <!-- Fallback for older browsers or if above aren't picked up -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+                                                                      
+    <!-- Apple Touch Icon (iOS will pick the largest appropriate size) -->
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png"> <!-- Recommended base size -->
+    <link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/icon-76x76.png">
+
+    <!-- Pico.css Framework -->
+    <link rel="stylesheet" href="css/pico.min.css">
+    <!-- Custom CSS styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Page Title -->
+        <h1>ESP32 Control & Stream</h1>
+        <div id="connectionStatus">Connecting...</div>
+
+        <!-- Section: Real-Time Stream Control -->
+        <article>
+            <header>Real-Time Stream</header>
+            <div class="grid">
+                <button id="startStreamButton" aria-busy="false">Start Stream</button>
+                <button id="stopStreamButton" class="secondary" aria-busy="false" disabled>Stop Stream</button>
+            </div>
+            <small id="streamStatusDisplay">Stream stopped.</small>
+            <pre id="binaryDataLogArea">(Stream data log will appear here)</pre>
+        </article>
+
+        <!-- Section: Configurable Variables (Get/Set) -->
+        <figure>
+            <header>Configurable Variables (Get/Set)</header>
+            <button id="loadVarsConfigButton" style="margin-bottom: 1rem;" disabled>Load Variables Configuration</button>
+            
+            <div> 
+                <table role="grid">
+                    <thead>
+                        <tr>
+                            <th scope="col">Variable</th>
+                            <th scope="col">Current Value</th>
+                            <th scope="col">ESP32 Type</th>
+                            <th scope="col">Actions (Get/Set)</th> 
+                        </tr>
+                    </thead>
+                    <tbody id="variablesTableBody">
+                        <tr><td colspan="4" style="text-align: center; color: grey;">Click "Load Variables Configuration..." or wait for connection.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </figure>
+
+        <!-- Informational Footer -->
+        <footer>
+            <hr>
+            <small>Connect to the ESP32's Wi-Fi network (SSID: ESP32_Control_AP) and reload the page if needed.</small>
+        </footer>
+
+    </main> <!-- End of main container -->
+
+    <!-- Import the main JavaScript module -->
+    <!-- The 'type="module"' attribute is essential for ES6 modules -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+    "name": "ESP32 Control & Stream",
+    "short_name": "ESP32Ctrl",
+    "description": "Control and stream data from an ESP32 via WebSocket.",
+    "start_url": "index.html", 
+    "display": "standalone", 
+    "background_color": "#ECEFF1", 
+    "theme_color": "#37474F", 
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "icons/icon-76x76.png",
+            "sizes": "76x76",
+            "type": "image/png"
+        },        
+        {
+            "src": "icons/icon-120x120.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

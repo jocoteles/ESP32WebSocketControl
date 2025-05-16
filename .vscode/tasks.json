@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "PIO Upload LittleFS data folder",
+            "type": "process",
+            "command": "${userHome}/.platformio/penv/bin/pio",
+            "args": [
+                "run",
+                "--target",
+                "uploadfs",
+                "--environment",
+                "main_app"
+            ],
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Upload LittleFS Manager",
+            "type": "process",
+            "command": "${userHome}/.platformio/penv/bin/pio",
+            "args": [
+                "run",
+                "--target",
+                "upload",
+                "--environment",
+                "little_fs_manager"
+            ],
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
