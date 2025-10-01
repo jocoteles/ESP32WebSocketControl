@@ -7,6 +7,8 @@ This project demonstrates a robust ESP32 application for:
 
 The project is built using the **PlatformIO IDE** with the Arduino framework.
 
+We also implemented a [pure WebBluetooth version](https://github.com/jocoteles/ESP32WebBluetooh) of this project. Please, check it out.
+
 ## Features
 
 *   **WiFi Access Point Mode:** ESP32 hosts its own WiFi network.
